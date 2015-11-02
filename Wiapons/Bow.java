@@ -9,4 +9,9 @@ public class Bow implements Behavior {
     public void execute() {
         System.out.println("shout to opponent");
     }
+
+    @Override
+    public String toString(){
+        return getClass().getSimpleName();
+    }
 }

@@ -8,4 +8,9 @@ public class Sword implements Behavior {
     public void execute() {
         System.out.println("cut to opponent");
     }
+
+    @Override
+    public String toString(){
+        return getClass().getSimpleName();
+    }
 }

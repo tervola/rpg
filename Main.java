@@ -11,19 +11,11 @@ import Patterns.aStrategy.Wiapons.Sword;
 public class Main {
 
     public static void main(String[] args) {
+        Printer printer = new Printer();
+        Arena arena = new Arena();
+        arena.setWarriors("Conan", "Xena");
+        printer.printBanner(arena.getWarriors());
 
-        Behavior sword = new Sword();
-        Behavior bow = new Bow();
-
-        Arena arena = new Arena(sword);
-
-        arena.performance();
-
-        arena = new Arena(bow);
-
-        arena.performance();
-
-        arena.getWarriors();
     }
 
 

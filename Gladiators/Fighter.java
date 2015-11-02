@@ -19,6 +19,7 @@ public class Fighter {
         this.straight = streight;
         this.agility = agility;
         this.health = health;
+        setBehavior();
 
     }
 
@@ -38,8 +39,17 @@ public class Fighter {
         return health;
     }
 
-    public String setBehavior() {
+    public void setBehavior() {
         Armory armory = new Armory();
-        return null;
+        if(armory.getBehavior() != null){
+            behavior = armory.getBehavior();
+        } else
+        {
+            //
+        }
+
+    }
+    public String getBehaviorDescription(){
+        return behavior.toString();
     }
 }

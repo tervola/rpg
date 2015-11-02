@@ -14,16 +14,19 @@ public class Armory {
     Behavior behavior;
     int weaponVariations = Behaviors.values().length;
 
-    int choise = new Random().nextInt((weaponVariations-0)+1);
+    int choise = new Random().nextInt(weaponVariations-0)+1;
 
     public Armory() {
         switch (choise){
             case 1: behavior = new Sword();
+                    break;
             case 2: behavior = new Bow();
-
+                    break;
+            default: behavior = null;
         }
-
     }
 
-
+    public Behavior getBehavior() {
+        return behavior;
+    }
 }
