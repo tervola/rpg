@@ -31,8 +31,8 @@ public class Arena {
         return fighter2;
     }
     public void setWarriors(String firstFighter, String secondFighter){
-        fighter1 = new Fighter(firstFighter, 25,10,100,1);
-        fighter2 = new Fighter(secondFighter, 15,20,90,2);
+        fighter1 = new Fighter(firstFighter, 25,10,50,1);
+        fighter2 = new Fighter(secondFighter, 15,20,50,2);
     }
 
     public List<Fighter> getWarriors(){
@@ -45,7 +45,7 @@ public class Arena {
     /*
     begin fight
      */
-    public String performance() {
+    public String performance() throws InterruptedException {
         Fight fight = new Fight(fighter1,fighter2);
         fight.begin();
         return null;

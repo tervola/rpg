@@ -21,4 +21,33 @@ public class Printer {
         banner.append(String.format("\nFighter %s chose %s", fighter2.getName(), fighter2.getBehaviorDescription()));
         printConsole(banner.toString());
     }
+
+    public void printBattle(Fighter fighter1, Fighter fighter2, int damage1, int damage2) {
+        StringBuilder switchHit = new StringBuilder();
+        if(fighter1.getHealth()>0 || fighter2.getHealth()>0) {
+            switchHit.append(String.format("\n%s hit %s -%s. Now %s has health: %s/%s ",
+                    fighter1.getName(),
+                    fighter2.getName(),
+                    damage1,
+                    fighter2.getName(),
+                    fighter2.getHealth(),
+                    fighter2.getOriginalHealth()
+            ));
+            switchHit.append(String.format("\n%s hit %s -%s. Now %s has health: %s/%s",
+                    fighter2.getName(),
+                    fighter1.getName(),
+                    damage2,
+                    fighter1.getName(),
+                    fighter1.getHealth(),
+                    fighter1.getOriginalHealth()
+            ));
+        } else if(fighter1.getHealth() < 0 || fighter2.getHealth() < 0) {
+            switchHit = new StringBuilder(String.format("\nBoth of warriors are dead!\n%s has %s, \n%s has %s",fighter1.getName(),fighter1.getHealth(),fighter2.getName(),fighter2.getHealth()));
+        } else if( fighter1.getHealth() < 0) {
+            switchHit = new StringBuilder(String.format("\n%s is winner!",fighter1.getName()));
+        } else {
+            switchHit = new StringBuilder(String.format("\n%s is winner!",fighter2.getName()));
+        }
+        printConsole(switchHit.toString());
+    }
 }

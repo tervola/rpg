@@ -14,6 +14,12 @@ public class Fighter {
     int agility;
     int health;
 
+    public int getOriginalHealth() {
+        return originalHealth;
+    }
+
+    int originalHealth;
+
     /**
      * warriorType:
      * 1 - strength:
@@ -43,6 +49,7 @@ public class Fighter {
         this.strength = streight;
         this.agility = agility;
         this.health = health;
+        originalHealth = health;
         this.warriorType = warriorType;
         setBehavior();
         damage = new Random().nextInt((3-0))+1;

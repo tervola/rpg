@@ -10,7 +10,7 @@ import Patterns.aStrategy.Wiapons.Sword;
  */
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         Printer printer = new Printer();
         Arena arena = new Arena();
         arena.setWarriors("Conan", "Xena");
