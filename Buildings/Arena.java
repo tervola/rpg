@@ -1,5 +1,6 @@
 package Patterns.aStrategy.Buildings;
 
+import Patterns.aStrategy.Fight;
 import Patterns.aStrategy.Gladiators.Fighter;
 import Patterns.aStrategy.Printer;
 
@@ -13,10 +14,6 @@ public class Arena {
 
     Fighter fighter1;
     Fighter fighter2;
-
-    public void performance() {
-        //behavior.execute();
-    }
 
     /* Creating fighters
         1. humans
@@ -34,8 +31,8 @@ public class Arena {
         return fighter2;
     }
     public void setWarriors(String firstFighter, String secondFighter){
-        fighter1 = new Fighter(firstFighter, 25,10,100);
-        fighter2 = new Fighter(secondFighter, 15,20,90);
+        fighter1 = new Fighter(firstFighter, 25,10,100,1);
+        fighter2 = new Fighter(secondFighter, 15,20,90,2);
     }
 
     public List<Fighter> getWarriors(){
@@ -48,6 +45,11 @@ public class Arena {
     /*
     begin fight
      */
+    public String performance() {
+        Fight fight = new Fight(fighter1,fighter2);
+        fight.begin();
+        return null;
+    }
 
     /*
     finish fight
