@@ -16,6 +16,8 @@ public class Main {
         arena.setWarriors("Conan", "Xena");
         printer.printBanner(arena.getWarriors());
 
+        arena.performance();
+
     }
 
 
