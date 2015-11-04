@@ -29,8 +29,8 @@ public class Fight {
         int damage1 = fighter1.getDamage();
         int damage2 = fighter2.getDamage();
 
-        int fighter1Health = fighter2.getHealth() - damage2;
-        int fighter2Health = fighter1.getHealth() - damage1;
+        int fighter1Health = fighter1.getHealth() - damage2;
+        int fighter2Health = fighter2.getHealth() - damage1;
         fighter1.setHealth(fighter1Health);
         fighter2.setHealth(fighter2Health);
 

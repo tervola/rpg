@@ -52,9 +52,8 @@ public class Fighter {
         originalHealth = health;
         this.warriorType = warriorType;
         setBehavior();
-        damage = new Random().nextInt((3-0))+1;
         setDamage();
-
+        //damage += new Random().nextInt((3-0))+1;
     }
 
     private void setDamage() {
@@ -107,6 +106,6 @@ public class Fighter {
     }
 
     public int getDamage(){
-        return damage;
+        return damage + new Random().nextInt((3-0))+1;
     }
 }
